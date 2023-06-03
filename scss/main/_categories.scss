@@ -1,0 +1,96 @@
+$categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categories04.png');
+
+#categories {
+	width: 100%;
+	padding: 64px 80px;
+
+	.wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+		overflow: hidden;
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 48px;
+			font-size: 40px;
+			line-height: 1.2em;
+			font-weight: 700;
+		}
+
+		ul.tab {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			gap: 30px;
+			margin-bottom: 50px;
+
+			li {
+				height: 35px;
+				font-family: Archia, sans-serif;
+				color: #1e1e2f;
+				font-size: 16px;
+				font-weight: 700;
+				cursor: pointer;
+				padding-bottom: 10px;
+
+				&.on {
+					font-weight: bold;
+					border-bottom: 3px solid #000;
+				}
+
+				&:hover {
+					border-bottom: 3px solid #000;
+				}
+			}
+		}
+
+		ul.img {
+			width: 100%;
+			padding: 0 5%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			gap: 20px;
+
+			li {
+				width: 230px;
+				height: 100%;
+
+				.img {
+					height: 300px;
+					border-radius: 20px;
+				}
+
+				@for $i from 1 through 4 {
+					.img#{$i} {
+						width: 100%;
+						background-image: url('../img/main/#{nth($categories,$i)}');
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+					}
+				}
+
+				strong {
+					font-family: Archia, sans-serif;
+					color: #1e1e2f;
+					font-size: 24px;
+
+					&.on {
+						color: #97c680;
+						-webkit-text-stroke: 0.6px #97c680;
+					}
+				}
+
+				p {
+					font-family: Archia, sans-serif;
+					font-size: 16px;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}
