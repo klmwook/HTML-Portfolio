@@ -5,6 +5,10 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 	padding: 64px 80px;
 
 	.wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin-right: auto;
+		margin-left: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -56,12 +60,13 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 			gap: 20px;
 
 			li {
-				width: 230px;
+				width: 280px;
 				height: 100%;
 
 				.img {
 					height: 300px;
 					border-radius: 20px;
+					margin-bottom: 10px;
 				}
 
 				@for $i from 1 through 4 {
@@ -78,6 +83,8 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 					font-family: Archia, sans-serif;
 					color: #1e1e2f;
 					font-size: 24px;
+					margin-bottom: 3px;
+					display: inline-block;
 
 					&.on {
 						color: #97c680;
@@ -89,6 +96,7 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 					font-family: Archia, sans-serif;
 					font-size: 16px;
 					line-height: 22px;
+					margin-bottom: 10px;
 				}
 			}
 		}

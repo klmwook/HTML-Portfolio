@@ -77,11 +77,19 @@ header .Login_Area .btn > a:hover {
   color: #1e1e2f;
 }
 
+body {
+  background-image: linear-gradient(-5deg, #f8f4f1 60%, #fefeff 98%);
+}
+
 #categories {
   width: 100%;
   padding: 64px 80px;
 }
 #categories .wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,12 +136,13 @@ header .Login_Area .btn > a:hover {
   gap: 20px;
 }
 #categories .wrap ul.img li {
-  width: 230px;
+  width: 280px;
   height: 100%;
 }
 #categories .wrap ul.img li .img {
   height: 300px;
   border-radius: 20px;
+  margin-bottom: 10px;
 }
 #categories .wrap ul.img li .img1 {
   width: 100%;
@@ -167,6 +176,8 @@ header .Login_Area .btn > a:hover {
   font-family: Archia, sans-serif;
   color: #1e1e2f;
   font-size: 24px;
+  margin-bottom: 3px;
+  display: inline-block;
 }
 #categories .wrap ul.img li strong.on {
   color: #97c680;
@@ -176,25 +187,163 @@ header .Login_Area .btn > a:hover {
   font-family: Archia, sans-serif;
   font-size: 16px;
   line-height: 22px;
+  margin-bottom: 10px;
 }
 
 #skills {
   width: 100%;
   padding: 64px 80px;
-  border: 1px solid #000;
+}
+#skills .wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#skills .wrap .top {
+  width: 100%;
+  display: flex;
+}
+#skills .wrap .top .left {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#skills .wrap .top .left h1 {
+  margin-top: 0;
+  font-size: 40px;
+  line-height: 1.2em;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1e2f;
+  margin-bottom: 50px;
+}
+#skills .wrap .top .right {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 544px;
+  margin-right: 80px;
+}
+#skills .wrap .top .right p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1e2f;
+  font-size: 20px;
+  line-height: 25px;
+}
+#skills .wrap .top .right .number_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 544px;
+  overflow: hidden;
+  margin-top: 48px;
+  margin-bottom: -85px;
+  background-color: #97c680;
+}
+#skills .wrap .top .right .number_area .number_area_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skills .wrap .top .right .number_area .number_area_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+#skills .wrap .top .right .number_area h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1e2f;
+  margin-right: 16px;
+  font-size: 52px;
+  line-height: 1em;
+}
+#skills .wrap .top .right .number_area h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+  text-transform: uppercase;
+}
+#skills .wrap .top .right .number_area .bar {
+  width: 1px;
+  height: 40px;
+  margin-right: 52px;
+  margin-left: 52px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  background-color: #1e1e2f;
+}
+#skills .wrap .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skills .wrap .bottom .left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#skills .wrap .bottom .left ul li {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+#skills .wrap .bottom .left ul li .icon_area {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  margin-right: 24px;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05);
+}
+#skills .wrap .bottom .left ul li div strong {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#skills .wrap .bottom .left ul li div p {
+  color: rgba(30, 30, 47, 0.8);
+}
+#skills .wrap .bottom .right {
+  flex: 3;
+  height: 100%;
+}
+#skills .wrap .bottom .right .video_area {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+#skills .wrap .bottom .right .video_area iframe {
+  border-radius: 20px;
 }
 
 #visual {
   width: 100%;
   height: 650px;
   padding: 64px 80px;
-  background: #fdfdfd;
 }
 #visual .wrap {
   height: 100%;
   margin: 0 5%;
   padding: 40px 0;
-  background: #fdfdfd;
   display: flex;
   position: relative;
 }
@@ -219,7 +368,6 @@ header .Login_Area .btn > a:hover {
   position: absolute;
   top: 65%;
   left: 5%;
-  background: #fff;
 }
 #visual .wrap .right {
   width: 70%;

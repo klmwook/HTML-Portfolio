@@ -4,13 +4,13 @@ $visuals: ('visual01', 'visual02', 'visual03');
 	width: 100%;
 	height: 650px;
 	padding: 64px 80px;
-	background: #fdfdfd;
+	//background: #fdfdfd;
 
 	.wrap {
 		height: 100%;
 		margin: 0 5%;
 		padding: 40px 0;
-		background: #fdfdfd;
+		//background: #fdfdfd;
 		display: flex;
 		position: relative;
 
@@ -36,7 +36,7 @@ $visuals: ('visual01', 'visual02', 'visual03');
 				position: absolute;
 				top: 65%;
 				left: 5%;
-				background: #fff;
+				//background: #fff;
 			}
 		}
 		.right {
