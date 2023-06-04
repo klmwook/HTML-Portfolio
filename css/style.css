@@ -230,7 +230,6 @@ footer .wrap .SNS .right {
   justify-content: right;
   align-items: center;
   margin-right: 3%;
-  gap: 20px;
 }
 footer .wrap .SNS .right li {
   display: flex;
@@ -253,7 +252,7 @@ footer .wrap .SNS .right li .icon_img1 {
   border: 1px solid rgba(30, 30, 47, 0.1);
   border-radius: 100px;
   transition: 0.3s;
-  background-image: url("../../img/main/ico_facebook.svg");
+  background-image: url("../img/main/ico_facebook.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%;
@@ -269,7 +268,7 @@ footer .wrap .SNS .right li .icon_img2 {
   border: 1px solid rgba(30, 30, 47, 0.1);
   border-radius: 100px;
   transition: 0.3s;
-  background-image: url("../../img/main/ico_twitter.svg");
+  background-image: url("../img/main/ico_twitter.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%;
@@ -285,7 +284,7 @@ footer .wrap .SNS .right li .icon_img3 {
   border: 1px solid rgba(30, 30, 47, 0.1);
   border-radius: 100px;
   transition: 0.3s;
-  background-image: url("../../img/main/ico_instagram.svg");
+  background-image: url("../img/main/ico_instagram.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%;
