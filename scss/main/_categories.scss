@@ -102,3 +102,22 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 		}
 	}
 }
+
+@media screen and (max-width: $pc_small) {
+	#categories {
+		.wrap {
+			ul.img {
+				li {
+					strong {
+						font-size: 20px;
+
+						&.on {
+							color: #97c680;
+							-webkit-text-stroke: 0.6px #97c680;
+						}
+					}
+				}
+			}
+		}
+	}
+}

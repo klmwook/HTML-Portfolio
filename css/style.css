@@ -49,6 +49,12 @@ header .menu li > a {
 header .menu li > a:hover {
   box-shadow: inset 0 -9px 0 0 #97c680;
 }
+header .btnCall {
+  display: none;
+}
+header .mobile_menu {
+  display: none;
+}
 header .Login_Area {
   flex: 2;
   justify-content: right;
@@ -77,6 +83,40 @@ header .Login_Area .btn > a:hover {
   color: #1e1e2f;
 }
 
+@media screen and (max-width: 1200px) {
+  header h1 {
+    flex: 1;
+  }
+  header ul {
+    display: flex;
+    gap: 20px;
+  }
+  header .menu {
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .menu li {
+    width: 30%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 999px) {
+  header h1 {
+    flex: 1;
+  }
+  header ul {
+    display: none;
+  }
+  header .menu {
+    display: none;
+  }
+  header .btnCall {
+    display: block;
+    color: #000;
+    font-size: 20px;
+  }
+}
 body {
   background-image: linear-gradient(-5deg, #f8f4f1 60%, #fefeff 98%);
 }
@@ -432,6 +472,15 @@ footer .wrap .SNS .right li .icon_img3:hover {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1200px) {
+  #categories .wrap ul.img li strong {
+    font-size: 20px;
+  }
+  #categories .wrap ul.img li strong.on {
+    color: #97c680;
+    -webkit-text-stroke: 0.6px #97c680;
+  }
+}
 #skills {
   width: 100%;
   padding: 64px 80px;
@@ -538,6 +587,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
 #skills .wrap .bottom .left ul li {
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-right: 30px;
   display: flex;
 }
 #skills .wrap .bottom .left ul li .icon_area {
@@ -577,6 +627,16 @@ footer .wrap .SNS .right li .icon_img3:hover {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+  #skills .wrap .top {
+    width: 100%;
+    display: flex;
+  }
+  #skills .wrap .top .left h1 {
+    margin-right: 20px;
+    font-size: 32px;
+  }
+}
 #visual {
   width: 100%;
   height: 650px;
@@ -665,6 +725,199 @@ footer .wrap .SNS .right li .icon_img3:hover {
   white-space: nowrap;
   transform: rotate(-90deg);
   color: #f2f2f2;
+}
+
+@media screen and (max-width: 999px) {
+  #visual {
+    width: 100%;
+    height: 100%;
+    padding: 40px 60px;
+  }
+  #visual .wrap {
+    width: 100%;
+    margin: 0 3%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #visual .wrap .left {
+    width: 100%;
+    padding-bottom: 56px;
+  }
+  #visual .wrap .left h1 {
+    margin-bottom: 0px;
+  }
+  #visual .wrap .right {
+    width: 100%;
+    height: 300px;
+  }
+  #visual .wrap .right .picture:nth-of-type(1) {
+    width: 100%;
+    background-image: url("../img/main/visual01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #visual .wrap .right .picture:nth-of-type(2) {
+    width: 100%;
+    background-image: url("../img/main/visual02.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #visual .wrap .right .picture:nth-of-type(3) {
+    width: 100%;
+    background-image: url("../img/main/visual03.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #visual .wrap .right .picture {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    border-radius: 20px;
+    position: relative;
+  }
+  #visual .wrap .right .picture.on {
+    flex: 3;
+    overflow: hidden;
+  }
+  #visual .wrap .right .picture.on h1 {
+    transform: rotate(0deg);
+  }
+  #visual .wrap .right .picture h1 {
+    width: 100%;
+    padding: 5%;
+    position: absolute;
+    bottom: 78px;
+    font-size: 20px;
+    flex: 0 0 auto;
+    line-height: 1.1em;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    color: #f2f2f2;
+  }
+}
+#youtube {
+  width: 100%;
+  padding: 0 64px 80px;
+}
+#youtube .wrap {
+  height: 100%;
+  margin: 0 5%;
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#youtube .wrap h1 {
+  font-size: 40px;
+  line-height: 1.2em;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1e2f;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#youtube .wrap ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+#youtube .wrap ul li {
+  width: 25%;
+  min-height: 300px;
+  max-height: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#youtube .wrap ul li p {
+  font: 16px/1.5 "arial";
+  color: #1e1e2f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+#youtube .wrap ul li .Info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+#youtube .wrap ul li .Info .thumbnail {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  margin-right: 20px;
+}
+#youtube .wrap ul li .Info .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+#youtube .wrap ul li .Info p {
+  font: bold 14px/1.2 "arial";
+  color: #1e1e2f;
+  margin-bottom: 5px;
+  -webkit-line-clamp: 2;
+}
+#youtube .wrap ul li .Info a {
+  font: 14px/1.2 "arial";
+  color: #97c680;
+  margin-bottom: 5px;
+}
+#youtube .wrap .swiper_btn_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#youtube .wrap .swiper_btn_area .prev,
+#youtube .wrap .swiper_btn_area .next {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  margin-left: 8px;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  border-radius: 100px;
+  cursor: pointer;
+}
+#youtube .wrap .swiper_btn_area .prev:hover,
+#youtube .wrap .swiper_btn_area .next:hover {
+  background: #1e1e2f;
+}
+#youtube .wrap .swiper_btn_area .prev .arrow,
+#youtube .wrap .swiper_btn_area .next .arrow {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(30, 30, 47, 0.1);
+  border-radius: 100px;
+  transition: 0.3s;
+  background-image: url(../img/main/ico-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
+  object-fit: cover;
+}
+#youtube .wrap .swiper_btn_area .prev .arrow:hover,
+#youtube .wrap .swiper_btn_area .next .arrow:hover {
+  filter: brightness(0%) invert(100%);
+}
+#youtube .wrap .swiper_btn_area .next > .arrow {
+  transform: scaleX(-1);
 }
 
 /*# sourceMappingURL=style.css.map */
