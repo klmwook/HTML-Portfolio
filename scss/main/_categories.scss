@@ -38,15 +38,20 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 				font-size: 16px;
 				font-weight: 700;
 				cursor: pointer;
-				padding-bottom: 10px;
 
 				&.on {
-					font-weight: bold;
-					border-bottom: 3px solid #000;
+					span {
+						padding-bottom: 10px;
+						font-weight: bold;
+						border-bottom: 3px solid #000;
+					}
 				}
 
 				&:hover {
-					border-bottom: 3px solid #000;
+					span {
+						padding-bottom: 10px;
+						border-bottom: 3px solid #000;
+					}
 				}
 			}
 		}
@@ -114,6 +119,66 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 						&.on {
 							color: #97c680;
 							-webkit-text-stroke: 0.6px #97c680;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	#categories {
+		.wrap {
+			ul.tab {
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+
+				li {
+					width: 25%;
+					text-align: center;
+				}
+			}
+
+			ul.img {
+				justify-content: space-between;
+				flex-wrap: wrap;
+				text-align: center;
+
+				li {
+					width: 45%;
+					@for $i from 1 through 4 {
+						.img#{$i} {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#categories {
+		.wrap {
+			ul.tab {
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+
+				li {
+					width: 40%;
+					text-align: center;
+				}
+			}
+
+			ul.img {
+				li {
+					width: 100%;
+					@for $i from 1 through 4 {
+						.img#{$i} {
+							width: 100%;
 						}
 					}
 				}
