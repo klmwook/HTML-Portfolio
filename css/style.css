@@ -143,7 +143,7 @@ footer .wrap .sitemap {
   margin-bottom: 30px;
 }
 footer .wrap .sitemap h1 {
-  flex: 1;
+  flex: 0.5;
   color: #333;
   font: bold 28px/1.2 "arial";
 }
@@ -187,7 +187,7 @@ footer .wrap .sitemap .input_Area .button_area {
   justify-content: center;
 }
 footer .wrap .sitemap .input_Area .button_area .input_text {
-  width: 240px;
+  width: 200px;
   margin-right: -1px;
   margin-bottom: 0;
   position: relative;
@@ -355,6 +355,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
   align-items: center;
 }
 #follow .like_Follow p {
+  font: 14px/1.2 "arial";
   color: hsla(0, 0%, 100%, 0.6);
   line-height: 1.5em;
 }
@@ -363,6 +364,81 @@ footer .wrap .SNS .right li .icon_img3:hover {
   color: #fff;
 }
 
+@media screen and (max-width: 999px) {
+  footer {
+    padding: 0 40px 30px;
+  }
+  footer .wrap .sitemap {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: left;
+    padding-bottom: 30px;
+  }
+  footer .wrap .sitemap h1 {
+    width: 100%;
+    font: bold 28px/1.2 "arial";
+    margin-bottom: 20px;
+  }
+  footer .wrap .sitemap .sitemap_Area {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  footer .wrap .sitemap .sitemap_Area ul {
+    max-width: 250px;
+  }
+  footer .wrap .sitemap .sitemap_Area ul li {
+    width: 45%;
+    text-align: left;
+  }
+  footer .wrap .sitemap .input_Area {
+    width: 100%;
+  }
+  footer .wrap .sitemap .input_Area p {
+    font: 18px/1 "arial";
+    text-align: left;
+  }
+  footer .wrap .sitemap .input_Area .button_area {
+    justify-content: left;
+  }
+  footer .wrap .sitemap .input_Area .button_area .input_text {
+    height: 40px;
+  }
+  footer .wrap .SNS {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 639px) {
+  footer {
+    padding: 0 40px 20px;
+  }
+  footer .wrap .sitemap {
+    margin-bottom: 20px;
+  }
+  footer .wrap .SNS .left {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  footer .wrap .SNS .left div {
+    line-height: 0;
+    margin-right: 10px;
+  }
+  footer .wrap .SNS .left div img {
+    width: 25px;
+    height: 25px;
+  }
+  footer .wrap .SNS .left span {
+    font: 12px/1 "arial";
+    text-align: center;
+  }
+  footer .wrap .SNS .right li {
+    width: 30px;
+    height: 30px;
+  }
+  #follow .like_Follow p {
+    font-size: 12px;
+  }
+}
 #categories {
   width: 100%;
   padding: 64px 80px;
@@ -483,6 +559,9 @@ footer .wrap .SNS .right li .icon_img3:hover {
   }
 }
 @media screen and (max-width: 999px) {
+  #categories {
+    padding: 40px 60px;
+  }
   #categories .wrap ul.tab {
     justify-content: space-between;
     align-items: center;
@@ -514,6 +593,9 @@ footer .wrap .SNS .right li .icon_img3:hover {
   }
 }
 @media screen and (max-width: 639px) {
+  #categories {
+    padding: 20px 50px;
+  }
   #categories .wrap ul.tab {
     justify-content: space-between;
     align-items: center;
@@ -693,6 +775,115 @@ footer .wrap .SNS .right li .icon_img3:hover {
   #skills .wrap .top .left h1 {
     margin-right: 20px;
     font-size: 32px;
+  }
+}
+@media screen and (max-width: 999px) {
+  #skills {
+    padding: 40px 60px;
+  }
+  #skills .wrap .top {
+    flex-wrap: wrap;
+  }
+  #skills .wrap .top .left {
+    width: 100%;
+  }
+  #skills .wrap .top .left h1 {
+    margin-bottom: 15px;
+  }
+  #skills .wrap .top .right {
+    width: 100%;
+    max-width: 100%;
+  }
+  #skills .wrap .top .right .number_area {
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  #skills .wrap .bottom .left {
+    justify-content: left;
+  }
+  #skills .wrap .bottom .left ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+  }
+  #skills .wrap .bottom .left ul li .icon_area {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.05);
+  }
+  #skills .wrap .bottom .left ul li div strong {
+    font-size: 15px;
+  }
+  #skills .wrap .bottom .left ul li div p {
+    color: rgba(30, 30, 47, 0.8);
+  }
+  #skills .wrap .bottom .right {
+    flex: 2;
+  }
+  #skills .wrap .bottom .right .video_area iframe {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 850px) {
+  #skills {
+    padding: 20px 50px;
+  }
+  #skills .wrap .bottom {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  #skills .wrap .bottom .left {
+    width: 100%;
+  }
+  #skills .wrap .bottom .right {
+    width: 100%;
+  }
+  #skills .wrap .bottom .right .video_area {
+    padding: 0;
+  }
+  #skills .wrap .bottom .right .video_area iframe {
+    height: 50vw;
+    border-radius: 0px;
+  }
+}
+@media screen and (max-width: 639px) {
+  #skills .wrap .top .right .number_area {
+    width: 350px;
+    margin-top: 20px;
+  }
+  #skills .wrap .top .right .number_area .number_area_right {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #skills .wrap .top .right .number_area h1 {
+    font-size: 30px;
+  }
+  #skills .wrap .top .right .number_area h2 {
+    font-size: 12px;
+  }
+  #skills .wrap .top .right .number_area .bar {
+    width: 1px;
+    height: 40px;
+    margin-right: 25px;
+    margin-left: 25px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-color: #1e1e2f;
+  }
+  #skills .wrap .bottom .left {
+    width: 100%;
+  }
+  #skills .wrap .bottom .right {
+    width: 100%;
+  }
+  #skills .wrap .bottom .right .video_area iframe {
+    width: 70vw;
+    height: 50vw;
+    border-radius: 0px;
   }
 }
 #visual {
@@ -929,6 +1120,35 @@ footer .wrap .SNS .right li .icon_img3:hover {
 }
 #youtube .wrap .swiper_btn_area .next > .arrow {
   transform: scaleX(-1);
+}
+
+@media screen and (max-width: 999px) {
+  #youtube {
+    padding: 40px 60px;
+  }
+  #youtube .wrap ul {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #youtube .wrap ul li {
+    width: 45%;
+    min-height: 200px;
+  }
+}
+@media screen and (max-width: 639px) {
+  #youtube {
+    padding: 20px 50px;
+  }
+  #youtube .wrap ul {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #youtube .wrap ul li {
+    width: 100%;
+    min-height: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

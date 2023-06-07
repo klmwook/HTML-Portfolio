@@ -129,6 +129,8 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 
 @media screen and (max-width: $tablet) {
 	#categories {
+		padding: 40px 60px;
+
 		.wrap {
 			ul.tab {
 				justify-content: space-between;
@@ -161,6 +163,8 @@ $categories: ('Categories01.png', 'Categories02.png', 'Categories03.png', 'Categ
 
 @media screen and (max-width: $mobile) {
 	#categories {
+		padding: 20px 50px;
+
 		.wrap {
 			ul.tab {
 				justify-content: space-between;

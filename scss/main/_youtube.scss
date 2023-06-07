@@ -132,3 +132,41 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#youtube {
+		padding: 40px 60px;
+
+		.wrap {
+			ul {
+				width: 100%;
+				flex-wrap: wrap;
+				justify-content: space-around;
+
+				li {
+					width: 45%;
+					min-height: 200px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#youtube {
+		padding: 20px 50px;
+
+		.wrap {
+			ul {
+				width: 100%;
+				flex-wrap: wrap;
+				justify-content: space-around;
+
+				li {
+					width: 100%;
+					min-height: 200px;
+				}
+			}
+		}
+	}
+}

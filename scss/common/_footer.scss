@@ -22,7 +22,7 @@ footer {
 			margin-bottom: 30px;
 
 			h1 {
-				flex: 1;
+				flex: 0.5;
 				color: #333;
 				font: bold 28px/1.2 'arial';
 			}
@@ -71,7 +71,7 @@ footer {
 					justify-content: center;
 
 					.input_text {
-						width: 240px;
+						width: 200px;
 						margin-right: -1px;
 						margin-bottom: 0;
 						position: relative;
@@ -229,12 +229,154 @@ footer {
 		}
 
 		p {
+			font: 14px/1.2 'arial';
 			color: hsla(0, 0%, 100%, 0.6);
 			line-height: 1.5em;
 
 			a {
 				display: inline-block;
 				color: #fff;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	footer {
+		padding: 0 40px 30px;
+
+		.wrap {
+			.sitemap {
+				flex-wrap: wrap;
+				flex-direction: column;
+				justify-content: left;
+				padding-bottom: 30px;
+
+				h1 {
+					width: 100%;
+					font: bold 28px/1.2 'arial';
+					margin-bottom: 20px;
+				}
+
+				.sitemap_Area {
+					width: 100%;
+					margin-bottom: 40px;
+
+					ul {
+						max-width: 250px;
+
+						li {
+							width: 45%;
+							text-align: left;
+						}
+					}
+				}
+
+				.input_Area {
+					width: 100%;
+
+					p {
+						font: 18px/1 'arial';
+						text-align: left;
+					}
+
+					.button_area {
+						justify-content: left;
+
+						.input_text {
+							height: 40px;
+						}
+					}
+				}
+			}
+
+			.SNS {
+				flex-wrap: wrap;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	footer {
+		padding: 0 40px 20px;
+		.wrap {
+			.sitemap {
+				//padding-bottom: 50px;
+				margin-bottom: 20px;
+
+				// h1 {
+				// 	flex: 0.5;
+				// 	color: #333;
+				// 	font: bold 28px/1.2 'arial';
+				// }
+
+				// ul {
+				// 	display: flex;
+				// 	justify-content: space-between;
+				// 	flex-wrap: wrap;
+				// 	align-items: center;
+				// 	gap: 20px 2%;
+				// 	flex: 1;
+
+				// 	li {
+				// 		width: 33%;
+				// 		display: inline-block;
+				// 		margin-right: 0;
+				// 		box-shadow: inset 0 0 0 0 #97c680;
+				// 		color: #1e1e2f;
+				// 		text-align: center;
+				// 		text-decoration: none;
+				// 		font: 18px/1 'arial';
+
+				// 		span {
+				// 			cursor: pointer;
+				// 			transition: 0.3s;
+				// 		}
+
+				// 		span:hover {
+				// 			box-shadow: inset 0 -9px 0 0 #97c680;
+				// 		}
+				// 	}
+				// }
+			}
+
+			.SNS {
+				.left {
+					align-items: center;
+					margin-bottom: 10px;
+
+					div {
+						line-height: 0;
+						margin-right: 10px;
+
+						img {
+							width: 25px;
+							height: 25px;
+						}
+					}
+
+					span {
+						font: 12px/1 'arial';
+						text-align: center;
+					}
+				}
+
+				.right {
+					li {
+						width: 30px;
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	#follow {
+		.like_Follow {
+			p {
+				font-size: 12px;
 			}
 		}
 	}
