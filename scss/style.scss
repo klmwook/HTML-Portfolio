@@ -10,8 +10,9 @@ $mobile: 639px;
 
 //main
 @import 'main/categories';
-@import 'main/notice';
-@import 'main/review';
 @import 'main/skills';
 @import 'main/visual';
 @import 'main/youtube';
+
+//sub
+@import 'sub/Members.scss';

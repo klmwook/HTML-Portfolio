@@ -1,0 +1,34 @@
+{
+    "members": [
+        {
+            "name": "Julia Jung",
+            "position": "President",
+            "pic": "member_01.jpg"
+        },
+        {
+            "name": "David Choi",
+            "position": "Vice President",
+            "pic": "member_02.jpg"
+        },
+        {
+            "name": "Emily Simpson",
+            "position": "UI Designer",
+            "pic": "member_03.jpg"
+        },
+        {
+            "name": "Paul Davison",
+            "position": "Front-end Engineer",
+            "pic": "member_04.jpg"
+        },
+        {
+            "name": "Sara Kim",
+            "position": "Back-end Engineer",
+            "pic": "member_05.jpg"
+        },
+        {
+            "name": "Michael",
+            "position": "Project Manager",
+            "pic": "member_06.jpg"
+        }
+    ]
+}
