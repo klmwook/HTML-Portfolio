@@ -7,6 +7,7 @@ $mobile: 639px;
 @import 'common/header';
 @import 'common/layout';
 @import 'common/footer';
+@import 'common/pop';
 
 //main
 @import 'main/categories';
@@ -16,3 +17,4 @@ $mobile: 639px;
 
 //sub
 @import 'sub/Members.scss';
+@import 'sub/Youtube.scss';

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -438,6 +439,55 @@ footer .wrap .SNS .right li .icon_img3:hover {
   }
   #follow .like_Follow p {
     font-size: 12px;
+  }
+}
+.pop {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0px;
+  padding: 100px;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.pop.on {
+  opacity: 1;
+}
+.pop .con {
+  width: 100%;
+  height: 100%;
+}
+.pop .con iframe,
+.pop .con video,
+.pop .con img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+.pop .con img {
+  object-fit: contain;
+}
+.pop .close {
+  font: bold 14px/1 "arial";
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 999px) {
+  .pop {
+    padding: 40% 10%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .pop {
+    padding: 80% 10%;
   }
 }
 #categories {
@@ -1316,6 +1366,158 @@ footer .wrap .SNS .right li .icon_img3:hover {
 }
 #Sub_Members .wrap .Tab_Area li .SNS_Area .SNS .icon_img3:hover {
   filter: brightness(0%) invert(100%);
+}
+
+#Sub_Youtube {
+  width: 100%;
+  height: 100%;
+  padding: 64px 10%;
+  overflow: hidden;
+}
+#Sub_Youtube .wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#Sub_Youtube .wrap .title {
+  width: 50%;
+  padding: 30px 0 100px;
+}
+#Sub_Youtube .wrap .title .main {
+  width: 100%;
+  border-bottom: 1px solid #1e1e2f;
+}
+#Sub_Youtube .wrap .title .main h1 {
+  width: 100%;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  padding-bottom: 20px;
+}
+#Sub_Youtube .wrap .title .sub {
+  width: 100%;
+  text-align: right;
+  padding: 30px 0;
+}
+#Sub_Youtube .wrap .title .sub h2 {
+  display: inline-block;
+  width: 50%;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+#Sub_Youtube .wrap .contents {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#Sub_Youtube .wrap .contents ul > li {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-top: 1px solid #1e1e2f;
+  gap: 10px;
+}
+#Sub_Youtube .wrap .contents ul > li:last-child {
+  border-bottom: 1px solid #1e1e2f;
+}
+#Sub_Youtube .wrap .contents ul > li .you_title {
+  width: 30%;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  min-height: 250px;
+}
+#Sub_Youtube .wrap .contents ul > li .you_desc {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 250px;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+#Sub_Youtube .wrap .contents ul > li .you_desc p {
+  opacity: 0.7;
+}
+#Sub_Youtube .wrap .contents ul > li .you_desc span {
+  color: orange;
+}
+#Sub_Youtube .wrap .contents ul > li .you_thumb {
+  width: 30%;
+  min-height: 250px;
+  cursor: pointer;
+}
+#Sub_Youtube .wrap .contents ul > li .you_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 999px) {
+  #Sub_Youtube {
+    padding: 30px 5% 50px;
+  }
+  #Sub_Youtube .wrap .title {
+    width: 100%;
+    padding: 0px 0 50px;
+  }
+  #Sub_Youtube .wrap .title .main h1 {
+    font-weight: 700;
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+  #Sub_Youtube .wrap .title .sub {
+    width: 100%;
+    padding: 30px 0;
+  }
+  #Sub_Youtube .wrap .title .sub h2 {
+    width: 100%;
+    font-size: 16px;
+  }
+  #Sub_Youtube .wrap .contents ul > li {
+    flex-wrap: wrap;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_title {
+    width: 45%;
+    font-size: 16px;
+    min-height: auto;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_desc {
+    width: 45%;
+    font-size: 12px;
+    min-height: auto;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_desc span {
+    margin-top: 10px;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_thumb {
+    width: 100%;
+    text-align: center;
+    min-height: auto;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_thumb img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 639px) {
+  #Sub_Youtube .wrap .title .main h1 {
+    font-weight: 700;
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_title {
+    width: 100%;
+    font-size: 14px;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_desc {
+    width: 100%;
+  }
+  #Sub_Youtube .wrap .contents ul > li .you_thumb img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
