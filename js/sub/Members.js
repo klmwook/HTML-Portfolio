@@ -6,7 +6,7 @@ fnsetMembers();
 //데이터를 가져오는 로직
 async function fnsetMembers() {
 	try {
-		const data = await fetch('../../DB/department.json');
+		const data = await fetch('./DB/department.json');
 		const json = await data.json();
 
 		fnMakeMembers(json.members);
@@ -27,7 +27,7 @@ function fnMakeMembers(arr) {
           <li>
           <div class="pic_Area">
             <div class="pic">
-              <img src="../../img/sub/${data.pic}" alt="" class="pic_img">
+              <img src="./img/sub/${data.pic}" alt="" class="pic_img">
             </div>
           </div>
           <div class="Name">
