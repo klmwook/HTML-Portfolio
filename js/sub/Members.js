@@ -62,15 +62,17 @@ function fnCheckLoading() {
 		const cli = Tab.querySelectorAll('li');
 		let count = 0;
 
-		for (const el of cli) {
-			el.onload = () => {
+		setTimeout(() => {
+			for (const el of cli) {
 				console.log(count); //콘솔에 찍히지 않음.
-				count++;
-				if (count === cli.length) {
-					Tab.classList.add('on');
-				}
-			};
-		}
+				el.onload = () => {
+					count++;
+					if (count === cli.length) {
+						Tab.classList.add('on');
+					}
+				};
+			}
+		}, 0);
 	} catch (err) {
 		console.log('[Error - fnCheckLoading]' + err.message);
 	}
