@@ -10,7 +10,7 @@ document.body.addEventListener('click', (e) => {
 //데이터 fetching 함수
 async function fetchData() {
 	const key = 'AIzaSyDOsDRuQ_v0ISUQEy6mZdnCfcf3VKIG5uE';
-	const list = 'PLGrvPC1Wr19hfiUx9COmzcnOQLVEihTor';
+	const list = 'PLGrvPC1Wr19hEuOc58RgKY1uPw_0eoIbE';
 	const num = 10;
 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${list}&key=${key}&maxResults=${num}`;
 
@@ -28,6 +28,7 @@ function createList(arr) {
 		let tit = item.snippet.title;
 		let desc = item.snippet.description;
 		let date = item.snippet.publishedAt;
+		let channel = item.snippet.videoOwnerChannelTitle;
 
 		tags += `
           <li>
@@ -36,7 +37,10 @@ function createList(arr) {
           </div>
           <div class="you_desc">
             <p>${desc.length > 200 ? desc.substr(0, 200) + '...' : desc}</p>      
-            <span>${date.split('T')[0].split('-').join('.')}</span>
+						<div class='channel_info'>
+							<span class='channel'>${channel}</span>
+							<span class='date'>${date.split('T')[0].split('-').join('.')}</span>
+						</div>            
           </div>
           <div class="you_thumb">
           <img class='thumb' src=${item.snippet.thumbnails.standard.url} alt=${item.snippet.resourceId.videoId}/>
