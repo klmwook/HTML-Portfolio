@@ -1218,7 +1218,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("./img/sub/Members_icon_01.png");
+  background-image: url("/img/sub/Members_icon_01.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60% 60%;
@@ -1326,7 +1326,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
   border: 1px solid rgba(30, 30, 47, 0.1);
   border-radius: 100px;
   transition: 0.3s;
-  background-image: url("./img/main/ico_facebook.svg");
+  background-image: url("/img/main/ico_facebook.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%;
@@ -1342,7 +1342,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
   border: 1px solid rgba(30, 30, 47, 0.1);
   border-radius: 100px;
   transition: 0.3s;
-  background-image: url("./img/main/ico_twitter.svg");
+  background-image: url("/img/main/ico_twitter.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%;
@@ -1358,7 +1358,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
   border: 1px solid rgba(30, 30, 47, 0.1);
   border-radius: 100px;
   transition: 0.3s;
-  background-image: url("./img/main/ico_instagram.svg");
+  background-image: url("/img/main/ico_instagram.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%;
