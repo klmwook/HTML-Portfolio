@@ -1680,6 +1680,80 @@ footer .wrap .SNS .right li .icon_img3:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+#Sub_Gallery .wrap .contents.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+#Sub_Gallery .wrap .contents ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#Sub_Gallery .wrap .contents ul li {
+  width: 25%;
+  padding: 20px;
+}
+#Sub_Gallery .wrap .contents ul li .Img_Area {
+  min-height: 200px;
+}
+#Sub_Gallery .wrap .contents ul li .Img_Area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+#Sub_Gallery .wrap .contents ul li .Img_Title {
+  display: block;
+  padding: 10px 5px;
+}
+#Sub_Gallery .wrap .contents ul li .Img_Title p {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #888;
+}
+#Sub_Gallery .wrap .contents ul li .Img_UserInfo {
+  width: 100%;
+  padding: 10px 5px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+#Sub_Gallery .wrap .contents ul li .Img_UserInfo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #0a0808;
+}
+#Sub_Gallery .wrap .contents ul li .Img_UserInfo span {
+  display: inline-block;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#Sub_Gallery .loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 1s;
+  z-index: 3;
+  background: transparent;
+}
+#Sub_Gallery .loading.off {
+  opacity: 0;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
