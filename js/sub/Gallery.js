@@ -1,5 +1,5 @@
 const wrap = document.querySelector('#Sub_Gallery .contents');
-const loading = document.querySelector('#Sub_Gallery .loading');
+const loading = document.querySelector('#Sub_Gallery .loading_Area');
 const input = document.querySelector('.input_Area input');
 const btnSearch = document.querySelector('.input_Area button');
 const btnInterest = document.querySelector('.button_Area .int');
@@ -91,14 +91,13 @@ function setLoading() {
 
 		el.onload = () => {
 			count++;
-			console.log(count);
 			count === imgs.length && isoLayout();
 		};
 	}
 }
 
 function isoLayout() {
-	new Isotope(wrap, {
+	new Isotope(wrap.querySelector('ul'), {
 		// options
 		itemSelector: '.item',
 		transitionDuration: '0.5s',

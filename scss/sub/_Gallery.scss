@@ -172,7 +172,7 @@
 			margin: 20px 0;
 			opacity: 0;
 			transform: translateY(100px);
-			transition: 1s;
+			transition: 0.5s;
 
 			&.on {
 				opacity: 1;
@@ -242,19 +242,35 @@
 		}
 	}
 
-	.loading {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		opacity: 1;
-		transition: opacity 1s;
+	.loading_Area {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		background: rgba(0, 0, 0, 0.9);
+		opacity: 0.8;
 		z-index: 3;
-		background: transparent;
+		top: 0;
+		left: 0;
+		position: fixed;
+		top: 0;
+		left: 0px;
+		//transition: opacity 1s; 넣었더니 이질감이 느껴짐
 
 		&.off {
+			overflow: auto;
 			opacity: 0;
 			z-index: -1;
+		}
+
+		.loading {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 1;
+			transition: opacity 1s;
+			z-index: 3;
+			background: transparent;
 		}
 	}
 }
