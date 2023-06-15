@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
@@ -1902,6 +1903,73 @@ footer .wrap .SNS .right li .icon_img3:hover {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  padding: 30px;
+}
+#Sub_Register .wrap .contents table {
+  width: 100%;
+}
+#Sub_Register .wrap .contents table tr {
+  height: 35px;
+  margin-bottom: 10px;
+}
+#Sub_Register .wrap .contents table th {
+  width: 20%;
+  padding-bottom: 20px;
+}
+#Sub_Register .wrap .contents table td {
+  width: 80%;
+  padding-bottom: 20px;
+}
+#Sub_Register .wrap .contents table td .input_Area {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  margin: 15px 0;
+}
+#Sub_Register .wrap .contents table td .input_Area input {
+  font-size: 15px;
+  color: #222222;
+  width: 100%;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+  background: none;
+  margin-right: 10px;
+}
+#Sub_Register .wrap .contents table td .input_Area input::placeholder {
+  color: #aaaaaa;
+}
+#Sub_Register .wrap .contents table td .input_Area input:focus {
+  outline: none;
+}
+#Sub_Register .wrap .contents table td .input_Area input:focus ~ label, #Sub_Register .wrap .contents table td .input_Area input:valid ~ label {
+  font-size: 16px;
+  bottom: 40px;
+  color: #666;
+  font-weight: bold;
+}
+#Sub_Register .wrap .contents table td .input_Area input:focus ~ span, #Sub_Register .wrap .contents table td .input_Area input:valid ~ span {
+  width: 100%;
+}
+#Sub_Register .wrap .contents table td .input_Area label {
+  position: absolute;
+  color: #aaa;
+  left: 10px;
+  font-size: 20px;
+  bottom: 8px;
+  transition: all 0.2s;
+}
+#Sub_Register .wrap .contents table td p {
+  width: 100%;
+  color: #f44336;
+  padding-left: 10px;
+  padding-top: 10px;
+  font: 11px/1 "맑은 고딕";
+}
+#Sub_Register .wrap .contents table td p:nth-of-type(1) {
+  padding-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
