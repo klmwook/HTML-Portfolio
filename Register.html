@@ -63,7 +63,7 @@
       </div>
       <div class="contents">
         <div class="form_area">
-          <form>
+          <form action="result.html" method="get" id="member">
             <fieldset>
               <legend class="h">회원가입 폼 입력 항목</legend>
               <table>
@@ -75,18 +75,18 @@
                     <td>
 
                       <div class="input_Area">
-                        <input type="text" required>
+                        <input type="text" id="userid" name="userid" required>
                         <label>아이디를 입력하세요.</label>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <th scope="row">
-                      <label for="userid">Password</label>
+                      <label for="pwd1">Password</label>
                     </th>
                     <td>
                       <div class="input_Area">
-                        <input type="text" required>
+                        <input type="text" id="pwd1" name="pwd1" required>
                         <label>비밀번호를 입력하세요.</label>
                       </div>
                       <!-- <p>asldkjaslkdjalskdjad</p> -->
@@ -94,11 +94,11 @@
                   </tr>
                   <tr>
                     <th scope="row">
-                      <label for="userid">Re Password</label>
+                      <label for="pwd2">Re Password</label>
                     </th>
                     <td>
                       <div class="input_Area">
-                        <input type="text" required>
+                        <input type="text" id="pwd2" name="pwd2" required>
                         <label>비밀번호를 재 입력하세요.</label>
                       </div>
                       <!-- <p>asldkjaslkdjalskdjad</p> -->
@@ -106,11 +106,11 @@
                   </tr>
                   <tr>
                     <th scope="row">
-                      <label for="userid">E-mail</label>
+                      <label for="email">E-mail</label>
                     </th>
                     <td>
                       <div class="input_Area">
-                        <input type="text" required>
+                        <input type="text" id="email" name="email" required>
                         <label>이메일 주소를 입력하세요.</label>
                       </div>
                       <!-- <p>asldkjaslkdjalskdjad</p> -->
@@ -118,10 +118,10 @@
                   </tr>
                   <tr>
                     <th scope="row">
-                      <label for="userid">Education</label>
+                      <label for="edu">Education</label>
                     </th>
                     <td>
-                      <select name="" id="">
+                      <select name="edu" id="edu">
                         <option value="">최종학력을 선택해주세요</option>
                         <option value="elementary school">초등학교 졸업</option>
                         <option value="middle school">중학교 졸업</option>
@@ -131,50 +131,50 @@
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">
-                      <label for="userid">Gender</label>
+                    <th scope="row" class="padding_top20">
+                      <label>Gender</label>
                     </th>
-                    <td>
-                      <label for="male">Male</label>
+                    <td class="padding_top20">
                       <input type="radio" name="gender" id="male" value="male">
+                      <label for="male" class="radio_label">Male</label>
 
-                      <label for="female">Female</label>
                       <input type="radio" name="gender" id="female" value="female">
+                      <label for="female" class="radio_label">Female</label>
                       <!-- <p>asldkjaslkdjalskdjad</p> -->
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">
-                      <label for="userid">Interests</label>
+                    <th scope="row" class="padding_top20">
+                      <label>Interests</label>
                     </th>
-                    <td>
-                      <label for="sports">Sports</label>
+                    <td class="padding_top20">
                       <input type="checkbox" name="hobby" id="sports" value="sports">
+                      <label for="sports" class="checkbox_label">Sports</label>
 
-                      <label for="music">Music</label>
                       <input type="checkbox" name="hobby" id="music" value="music">
+                      <label for="music" class="checkbox_label">Music</label>
 
-                      <label for="game">Game</label>
                       <input type="checkbox" name="hobby" id="game" value="game">
+                      <label for="game" class="checkbox_label">Game</label>
 
-                      <label for="reading">Reading</label>
                       <input type="checkbox" name="hobby" id="reading" value="reading">
+                      <label for="reading" class="checkbox_label">Reading</label>
                       <!-- <p>asldkjaslkdjalskdjad</p> -->
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">
+                    <th scope="row" class="padding_top20">
                       <label for="'comments">Comments</label>
                     </th>
-                    <td>
+                    <td class="padding_top20">
                       <textarea name="comments" id="comments" cols="30" rows="4" placeholder="남기는 글을 입력하세요."></textarea>
                       <!-- <p>asldkjaslkdjalskdjad</p> -->
                     </td>
                   </tr>
                   <tr>
-                    <th colspan="2">
-                      <input type="reset" value="Cancel">
-                      <input type="submit" value="Submit">
+                    <th colspan="2" class="padding_top20">
+                      <button type="reset">Cancel</button>
+                      <button type="submit">Submit</button>
                     </th>
                   </tr>
                 </tbody>
