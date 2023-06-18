@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <script src="https://kit.fontawesome.com/4f0445228d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script defer src="./js/Common/_layout.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f691f601f43c313669bdfa69cccfd207"></script>
+  <script defer src="./js/API/anime.js"></script>
+  <script defer src="./js/sub/Location.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="./">LOGO</a>
+    </h1>
+
+    <ul class="menu">
+      <li><a href="javascript:void(0)">Info</a></li>
+      <li><a href="./Members.html">Members</a></li>
+      <li><a href="./Youtube.html">Youtube</a></li>
+      <li><a href="./Gallery.html">Gallery</a></li>
+      <li><a href="javascript:void(0)">Community</a></li>
+      <li><a href="./Location.html">Location</a></li>
+    </ul>
+
+    <ul class="Login_Area">
+      <li class="Login">
+        <a href="javascript:void(0)">Login</a>
+      </li>
+      <li class="btn">
+        <a href="./Register.html">Register</a>
+      </li>
+    </ul>
+
+    <!-- 모바일 전용 버튼 -->
+    <a href="javascript:void(0)" id="mo_menu" class="btnCall">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+
+    <div class="mobile_menu"></div>
+
+  </header>
+
+  <section id="Sub_Location">
+    <div class="wrap">
+      <div class="title">
+        <div class="main">
+          <h1>
+            Location
+          </h1>
+        </div>
+        <div class="sub">
+          <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe autem labore ut voluptate mollitia a
+            consequatur possimus blanditiis cumque, sit vitae rem optio id minima sed doloremque. Debitis, aut? Sint.
+          </h2>
+        </div>
+
+      </div>
+      <div class="contents">
+        <div class="Contact_Us">
+          <div class="left">
+            <div class="left_title">
+              <h1>Send a Message</h1>
+            </div>
+            <div class="left_sub_title">
+              <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda amet nemo iure blanditiis
+                enim?</h2>
+            </div>
+            <ul>
+              <li>
+                <div class="input_Area">
+                  <input type="text" required>
+                  <label>Name</label>
+                </div>
+              </li>
+              <li>
+                <div class="input_Area">
+                  <input type="text" required>
+                  <label>Email Address</label>
+                </div>
+              </li>
+              <li>
+                <div class="input_Area">
+                  <input type="text" required>
+                  <label>Interested</label>
+                </div>
+              </li>
+              <li>
+                <div class="input_Area">
+                  <input type="text" required>
+                  <label>Phone Number</label>
+                </div>
+              </li>
+              <li>
+                <textarea name="comments" id="comments" cols="30" rows="4" placeholder="Message"></textarea>
+              </li>
+            </ul>
+            <div class="btn_Area">
+              <button>Submit</button>
+            </div>
+          </div>
+          <div class="right">
+            <ul id="map_list">
+              <li class="on">
+                <div class="right_title">
+                  <h1>
+                    Seoul Head Office
+                  </h1>
+                </div>
+                <div class="right_sub_title">
+                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequuntur dolorum dolore
+                    consectetur dolor quas.</h2>
+                </div>
+                <div class="phone_Area">
+                  <div class="icon_Area">
+                    <svg viewBox="0 0 512 512">
+                      <path
+                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                    </svg>
+                  </div>
+                  <span>010 - 5555 - 6666</span>
+                </div>
+              </li>
+              <li>
+                <div class="right_title">
+                  <h1>
+                    Busan Subsidiary Company
+                  </h1>
+                </div>
+                <div class="right_sub_title">
+                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequuntur dolorum dolore
+                    consectetur dolor quas.</h2>
+                </div>
+                <div class="phone_Area">
+                  <div class="icon_Area">
+                    <svg viewBox="0 0 512 512">
+                      <path
+                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                    </svg>
+                  </div>
+                  <span>010 - 3214 - 9514</span>
+                </div>
+              </li>
+              <li>
+                <div class="right_title">
+                  <h1>
+                    Deajeon Subsidiary Company
+                  </h1>
+                </div>
+                <div class="right_sub_title">
+                  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequuntur dolorum dolore
+                    consectetur dolor quas.</h2>
+                </div>
+                <div class="phone_Area">
+                  <div class="icon_Area">
+                    <svg viewBox="0 0 512 512">
+                      <path
+                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                    </svg>
+                  </div>
+                  <span>+81 - 6666 - 7777</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Map_Area">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="sitemap">
+        <h1>LOGO</h1>
+        <div class="sitemap_Area">
+          <ul>
+            <li><span>Info</span></li>
+            <li><span>Members</span></li>
+            <li><span>Youtube</span></li>
+            <li><span>Gallery</span></li>
+            <li><span>Community</span></li>
+            <li><span>Location</span></li>
+          </ul>
+        </div>
+        <div class="input_Area">
+          <p>Join our community</p>
+          <div class="button_area">
+            <input type="text" placeholder="Enter your email" class="input_text" />
+            <div class="submit_area">
+              <div class="checkbtn_area">
+                <img src="./img/main/ico-cheked.svg" />
+              </div>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="SNS">
+        <div class="left">
+          <div>
+            <img src="./img/main/logo-copyright.svg" alt="">
+          </div>
+          <span>
+            2021 Halo Lab. All rights reserved
+          </span>
+        </div>
+        <ul class="right">
+          <li>
+            <div class="icon_img1"></div>
+          </li>
+          <li>
+            <div class="icon_img2"></div>
+          </li>
+          <li>
+            <div class="icon_img3"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </footer>
+
+  <section id="follow">
+    <div class="like_Follow">
+      <div>
+        <img src="./img/main/follow-heart.svg" alt="">
+      </div>
+      <p>
+        <a href="javascript:void(0)">Like & Follow</a>
+        from you. New free to use projects from us.
+      </p>
+    </div>
+  </section>
+</body>
+
+</html>

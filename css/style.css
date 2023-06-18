@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@400;700&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -1043,6 +1044,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
 #visual .wrap .left.on {
   opacity: 1;
   transform: translateY(0);
+  z-index: 1;
 }
 #visual .wrap .left h1 {
   font-family: Archia, sans-serif;
@@ -2301,6 +2303,271 @@ footer .wrap .SNS .right li .icon_img3:hover {
   #Sub_Register .wrap .contents table tr td .checkbox_label {
     font-size: 13px;
   }
+}
+#Sub_Location {
+  width: 100%;
+  height: 100%;
+  padding: 154px 10% 64px;
+  overflow: hidden;
+}
+#Sub_Location .wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#Sub_Location .wrap .title {
+  width: 50%;
+  padding: 30px 0 100px;
+}
+#Sub_Location .wrap .title .main {
+  width: 100%;
+  border-bottom: 1px solid #1e1e2f;
+}
+#Sub_Location .wrap .title .main h1 {
+  width: 100%;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  padding-bottom: 20px;
+}
+#Sub_Location .wrap .title .sub {
+  width: 100%;
+  text-align: right;
+  padding: 30px 0;
+}
+#Sub_Location .wrap .title .sub h2 {
+  display: inline-block;
+  width: 50%;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+#Sub_Location .wrap .contents {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#Sub_Location .wrap .contents .Contact_Us {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Sub_Location .wrap .contents .Contact_Us .left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1%;
+  border-right: 1px solid rgba(30, 30, 47, 0.5);
+}
+#Sub_Location .wrap .contents .Contact_Us .left .left_title {
+  width: 100%;
+  padding: 20px 0;
+}
+#Sub_Location .wrap .contents .Contact_Us .left .left_title h1 {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left .left_sub_title {
+  width: 100%;
+  padding-bottom: 20px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left .left_sub_title h2 {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li {
+  width: 50%;
+  padding: 10px 5px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li:last-child {
+  padding-right: 6%;
+  width: 100%;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area {
+  width: 90%;
+  text-align: left;
+  position: relative;
+  margin: 15px 0;
+  cursor: pointer;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input {
+  font-size: 15px;
+  color: #1e1e2f;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #1e1e2f;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+  background: none;
+  margin-right: 10px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input::placeholder {
+  color: #aaaaaa;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input:focus {
+  outline: none;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input:focus ~ label, #Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input:valid ~ label {
+  font-size: 16px;
+  bottom: 40px;
+  color: #666;
+  font-weight: bold;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input:focus ~ span, #Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input:valid ~ span {
+  width: 100%;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area label {
+  position: absolute;
+  color: #aaa;
+  left: 10px;
+  font-size: 20px;
+  bottom: 8px;
+  transition: all 0.2s;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li textarea {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  color: #1e1e2f;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  resize: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #1e1e2f;
+  outline: none;
+}
+#Sub_Location .wrap .contents .Contact_Us .left ul li textarea::placeholder {
+  font-size: 20px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left .btn_Area {
+  width: 100%;
+  text-align: right;
+  margin-right: 50px;
+  padding-top: 20px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left .btn_Area button {
+  width: 100px;
+  height: 40px;
+  font-size: 17px;
+  border: 2px solid #1e1e2f;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+}
+#Sub_Location .wrap .contents .Contact_Us .left .btn_Area button:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  transform: scale(0.1);
+}
+#Sub_Location .wrap .contents .Contact_Us .left .btn_Area button:hover {
+  color: #fff;
+}
+#Sub_Location .wrap .contents .Contact_Us .left .btn_Area button:hover:after {
+  background: #000;
+  transform: scale(1);
+}
+#Sub_Location .wrap .contents .Contact_Us .right {
+  width: 50%;
+  padding-left: 1%;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li {
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li.on {
+  border-radius: 10px;
+  background: rgba(30, 30, 47, 0.05);
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .right_title {
+  width: 100%;
+  padding: 10px 0;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .right_title h1 {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .right_sub_title {
+  width: 100%;
+  padding-bottom: 15px;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .right_sub_title h2 {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .phone_Area {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .phone_Area .icon_Area {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 15px;
+  background: rgba(234, 108, 1, 0.11);
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .phone_Area .icon_Area svg {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  fill: #ea6c01;
+  object-fit: cover;
+}
+#Sub_Location .wrap .contents .Contact_Us .right ul li .phone_Area span {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ea6c01;
+}
+#Sub_Location .wrap .contents .Map_Area {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  padding: 1px;
+  margin-top: 50px;
+  border-radius: 30px;
+}
+#Sub_Location .wrap .contents .Map_Area #map {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,6 +27,7 @@ $visuals: ('visual01', 'visual02', 'visual03');
 			&.on {
 				opacity: 1;
 				transform: translateY(0);
+				z-index: 1;
 			}
 
 			h1 {
