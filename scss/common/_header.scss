@@ -7,6 +7,13 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	background: #fdfdfd;
+	position: absolute;
+
+	&.fix {
+		position: fixed;
+		background: #fff;
+		z-index: 3;
+	}
 
 	h1 {
 		flex: 1.5;

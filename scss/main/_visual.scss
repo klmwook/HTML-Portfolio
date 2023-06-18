@@ -2,8 +2,8 @@ $visuals: ('visual01', 'visual02', 'visual03');
 
 #visual {
 	width: 100%;
-	height: 650px;
-	padding: 64px 80px;
+	height: 740px;
+	padding: 154px 80px 64px;
 	//background: #fdfdfd;
 
 	.wrap {
@@ -31,12 +31,85 @@ $visuals: ('visual01', 'visual02', 'visual03');
 			}
 
 			.search_area {
-				width: 400px;
-				height: 120px;
+				width: 500px;
+				height: 100px;
 				position: absolute;
-				top: 65%;
-				left: 5%;
-				//background: #fff;
+				top: 75%;
+				left: 0;
+				text-align: center;
+				display: flex;
+				justify-content: left;
+				.input_text {
+					width: 300px;
+					height: 100%;
+					margin-right: -1px;
+					margin-bottom: 0;
+					position: relative;
+					z-index: 0;
+					padding-left: 25px;
+					border: 1px solid rgba(30, 30, 47, 0.2);
+					box-shadow: 0 46px 50px 0 rgba(0, 0, 0, 0.03);
+					border-radius: 0;
+					transition: 0.3s;
+					font-size: 16px;
+					outline: none;
+
+					&:focus {
+						border-color: #97c680;
+						box-shadow: 0 46px 50px 0 rgba(0, 0, 0, 0.1);
+					}
+				}
+
+				.submit_area {
+					width: 100px;
+					position: relative;
+					height: auto;
+					left: auto;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 1;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: #97c680;
+					box-shadow: inset 0 0 0 0 #feba88;
+					transition: 0.3s;
+					color: #1e1e2f;
+
+					&:hover {
+						box-shadow: inset 0 -100px 0 0 #feba88;
+					}
+
+					.checkbtn_area {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.img {
+							color: #1e1e2f;
+						}
+					}
+
+					input {
+						position: absolute;
+						left: 0;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						z-index: 3;
+						opacity: 0;
+						display: inline-block;
+						padding: 9px 15px;
+						background-color: #3898ec;
+						color: #fff;
+						border: 0;
+						line-height: inherit;
+						text-decoration: none;
+						cursor: pointer;
+						border-radius: 0;
+					}
+				}
 			}
 		}
 		.right {
@@ -97,7 +170,7 @@ $visuals: ('visual01', 'visual02', 'visual03');
 	#visual {
 		width: 100%;
 		height: 100%;
-		padding: 40px 60px;
+		padding: 90px 60px 40px;
 
 		.wrap {
 			width: 100%;
@@ -111,6 +184,10 @@ $visuals: ('visual01', 'visual02', 'visual03');
 
 				h1 {
 					margin-bottom: 0px;
+				}
+
+				.search_area {
+					display: none;
 				}
 			}
 			.right {
