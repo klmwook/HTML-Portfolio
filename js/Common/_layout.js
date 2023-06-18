@@ -1,3 +1,8 @@
+//widdow가 onload 전부 다 되고
+window.onload = function () {
+	document.querySelector('header').classList.add('on');
+};
+
 window.addEventListener('scroll', () => {
 	_headerFix();
 });

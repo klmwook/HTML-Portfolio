@@ -8,11 +8,20 @@ header {
 	align-items: center;
 	background: #fdfdfd;
 	position: absolute;
+	transform: translateY(-90px);
+	opacity: 0;
+	transition: 1s;
+
+	&.on {
+		transform: translateY(0px);
+		opacity: 1;
+	}
 
 	&.fix {
 		position: fixed;
 		background: #fff;
 		z-index: 3;
+		opacity: 1;
 	}
 
 	h1 {

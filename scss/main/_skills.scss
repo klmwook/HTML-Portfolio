@@ -10,6 +10,14 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
+		opacity: 0;
+		transform: translateY(200px);
+		transition: 1s;
+
+		&.on {
+			opacity: 1;
+			transform: translateY(0);
+		}
 
 		.top {
 			width: 100%;
@@ -55,6 +63,14 @@
 					margin-top: 48px;
 					margin-bottom: -85px;
 					background-color: #97c680;
+					height: 0%;
+					transition: height 1.5s;
+					opacity: 0;
+
+					&.on {
+						opacity: 1;
+						height: 70%;
+					}
 
 					.number_area_left {
 						display: flex;
@@ -296,6 +312,10 @@
 					.number_area {
 						width: 350px;
 						margin-top: 20px;
+
+						&.on {
+							height: 40%;
+						}
 
 						.number_area_right {
 							margin-top: 20px;

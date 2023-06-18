@@ -20,6 +20,14 @@ $visuals: ('visual01', 'visual02', 'visual03');
 			display: flex;
 			align-items: center;
 			padding-bottom: 56px;
+			opacity: 0;
+			transform: translateY(200px);
+			transition: 1s;
+
+			&.on {
+				opacity: 1;
+				transform: translateY(0);
+			}
 
 			h1 {
 				font-family: Archia, sans-serif;
@@ -115,11 +123,18 @@ $visuals: ('visual01', 'visual02', 'visual03');
 		.right {
 			width: 70%;
 			height: 100%;
-			//background: red;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
 			gap: 20px;
+			transform: translateX(-200px);
+			opacity: 0;
+			transition: 0.7s;
+
+			&.on {
+				opacity: 1;
+				transform: translateX(0);
+			}
 
 			@for $i from 1 through 3 {
 				.picture:nth-of-type(#{$i}) {
