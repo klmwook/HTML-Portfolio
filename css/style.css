@@ -2570,4 +2570,103 @@ footer .wrap .SNS .right li .icon_img3:hover {
   height: 100%;
 }
 
+@media screen and (max-width: 999px) {
+  #Sub_Location {
+    padding: 110px 5% 50px;
+  }
+  #Sub_Location .wrap .title {
+    width: 100%;
+    padding: 0px 0 50px;
+  }
+  #Sub_Location .wrap .title .main h1 {
+    font-weight: 700;
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+  #Sub_Location .wrap .title .sub {
+    width: 100%;
+    padding: 30px 0;
+  }
+  #Sub_Location .wrap .title .sub h2 {
+    width: 100%;
+    font-size: 16px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us {
+    flex-wrap: wrap;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left {
+    width: 100%;
+    border-right: none;
+    margin-bottom: 30px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left .left_title {
+    width: 100%;
+    padding: 10px 0;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left .left_title h1 {
+    font-size: 20px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left .left_sub_title {
+    padding-bottom: 30px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left .left_sub_title h2 {
+    font-size: 14px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left ul li {
+    padding: 10px 5px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left ul li:last-child {
+    padding-right: 0%;
+    width: 100%;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area {
+    margin: 15px auto;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input {
+    font-size: 13px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input:focus ~ label, #Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area input:valid ~ label {
+    font-size: 13px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left ul li .input_Area label {
+    font-size: 15px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left ul li textarea::placeholder {
+    font-size: 15px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left .btn_Area {
+    margin-right: 30px;
+    padding-top: 15px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .left .btn_Area button {
+    height: 30px;
+    font-size: 15px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .right {
+    width: 100%;
+    padding-left: 0%;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .right ul li {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .right ul li .right_title h1 {
+    font-size: 20px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .right ul li .right_sub_title h2 {
+    font-size: 14px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .right ul li .phone_Area .icon_Area {
+    width: 25px;
+    height: 25px;
+  }
+  #Sub_Location .wrap .contents .Contact_Us .right ul li .phone_Area span {
+    font-size: 12px;
+  }
+  #Sub_Location .wrap .contents .Map_Area {
+    height: 300px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

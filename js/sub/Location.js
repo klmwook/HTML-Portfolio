@@ -1,5 +1,16 @@
 const mapContainer = document.querySelector('#map');
 const btns = document.querySelectorAll('#map_list li');
+const input_area = document.querySelectorAll('.input_Area'); //input 요소
+const btn_Submit = document.querySelector('#btn_Submit');
+
+btn_Submit.addEventListener('click', () => alert('Submit 버튼'));
+
+//input 요소가 작아서 클릭 하면 focus 되게 했음
+input_area.forEach((input, idx) => {
+	input.addEventListener('click', () => {
+		input.querySelector('input').focus();
+	});
+});
 
 const markInfo = [
 	{

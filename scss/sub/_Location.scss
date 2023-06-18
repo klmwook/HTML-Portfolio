@@ -308,3 +308,147 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#Sub_Location {
+		padding: 110px 5% 50px;
+
+		.wrap {
+			.title {
+				width: 100%;
+				padding: 0px 0 50px;
+
+				.main {
+					h1 {
+						font-weight: 700;
+						font-size: 50px;
+						padding-bottom: 20px;
+					}
+				}
+
+				.sub {
+					width: 100%;
+					padding: 30px 0;
+
+					h2 {
+						width: 100%;
+						font-size: 16px;
+					}
+				}
+			}
+
+			.contents {
+				.Contact_Us {
+					flex-wrap: wrap;
+
+					.left {
+						width: 100%;
+						border-right: none;
+						margin-bottom: 30px;
+
+						.left_title {
+							width: 100%;
+							padding: 10px 0;
+
+							h1 {
+								font-size: 20px;
+							}
+						}
+
+						.left_sub_title {
+							padding-bottom: 30px;
+
+							h2 {
+								font-size: 14px;
+							}
+						}
+
+						ul {
+							li {
+								padding: 10px 5px;
+
+								&:last-child {
+									padding-right: 0%;
+									width: 100%;
+								}
+
+								.input_Area {
+									margin: 15px auto;
+
+									input {
+										font-size: 13px;
+
+										&:focus ~ label,
+										&:valid ~ label {
+											font-size: 13px;
+										}
+									}
+
+									label {
+										font-size: 15px;
+									}
+								}
+
+								textarea {
+									&::placeholder {
+										font-size: 15px;
+									}
+								}
+							}
+						}
+
+						.btn_Area {
+							margin-right: 30px;
+							padding-top: 15px;
+
+							button {
+								height: 30px;
+								font-size: 15px;
+							}
+						}
+					}
+
+					.right {
+						width: 100%;
+						padding-left: 0%;
+
+						ul {
+							li {
+								width: 100%;
+								padding: 15px;
+								cursor: pointer;
+
+								.right_title {
+									h1 {
+										font-size: 20px;
+									}
+								}
+
+								.right_sub_title {
+									h2 {
+										font-size: 14px;
+									}
+								}
+
+								.phone_Area {
+									.icon_Area {
+										width: 25px;
+										height: 25px;
+									}
+
+									span {
+										font-size: 12px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.Map_Area {
+					height: 300px;
+				}
+			}
+		}
+	}
+}
