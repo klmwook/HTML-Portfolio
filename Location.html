@@ -8,11 +8,16 @@
   <script src="https://kit.fontawesome.com/4f0445228d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script defer src="./js/Common/layout.js"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f691f601f43c313669bdfa69cccfd207"></script>
   <script defer src="./js/API/anime.js"></script>
   <script defer src="./js/sub/Location.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('DuVGSRIP4uXIG234N');
+    })();
+  </script>
 </head>
 
 <body>
@@ -74,38 +79,41 @@
               <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam assumenda amet nemo iure blanditiis
                 enim?</h2>
             </div>
-            <ul>
-              <li>
-                <div class="input_Area">
-                  <input type="text" required>
-                  <label>Name</label>
-                </div>
-              </li>
-              <li>
-                <div class="input_Area">
-                  <input type="text" required>
-                  <label>Email Address</label>
-                </div>
-              </li>
-              <li>
-                <div class="input_Area">
-                  <input type="text" required>
-                  <label>Interested</label>
-                </div>
-              </li>
-              <li>
-                <div class="input_Area">
-                  <input type="text" required>
-                  <label>Phone Number</label>
-                </div>
-              </li>
-              <li>
-                <textarea name="comments" id="comments" cols="30" rows="4" placeholder="Message"></textarea>
-              </li>
-            </ul>
-            <div class="btn_Area">
-              <button id="btn_Submit">Submit</button>
-            </div>
+            <form id="contact-form">
+              <input type="hidden" name="contact_number">
+              <ul>
+                <li>
+                  <div class="input_Area">
+                    <input type="text" name="name" autocomplete="off" required>
+                    <label>Name</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_Area">
+                    <input type="text" name="reply_to" autocomplete="off" required>
+                    <label>Email Address</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_Area">
+                    <input type="text" name="Interest" autocomplete="off" required>
+                    <label>Interested</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_Area">
+                    <input type="text" name="Phone" autocomplete="off" required>
+                    <label>Phone Number</label>
+                  </div>
+                </li>
+                <li>
+                  <textarea name="message" cols="30" rows="4" placeholder="Message" autocomplete="off"></textarea>
+                </li>
+              </ul>
+              <div class="btn_Area">
+                <button id="btn_Submit">Send</button>
+              </div>
+            </form>
           </div>
           <div class="right">
             <ul id="map_list">

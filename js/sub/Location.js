@@ -2,8 +2,24 @@ const mapContainer = document.querySelector('#map');
 const btns = document.querySelectorAll('#map_list li');
 const input_area = document.querySelectorAll('.input_Area'); //input 요소
 const btn_Submit = document.querySelector('#btn_Submit');
+let active_index = 0;
 
-btn_Submit.addEventListener('click', () => alert('Submit 버튼'));
+btn_Submit.addEventListener('click', (e) => {
+	e.preventDefault();
+	// generate a five digit number for the contact_number variable
+	document.getElementById('contact-form').contact_number.value = (Math.random() * 100000) | 0;
+	// service ID , template ID ,
+	emailjs.sendForm('service_Portfolio', 'template_zdeoxxk', document.getElementById('contact-form')).then(
+		function () {
+			document.getElementById('contact-form').reset();
+			alert('이메일 전송이 완료 되었습니다.');
+		},
+		function (error) {
+			alert('이메일 전송이 실패 하였습니다.');
+			console.log(`이메일 전송 실패 : ${error}`);
+		}
+	);
+});
 
 //input 요소가 작아서 클릭 하면 focus 되게 했음
 input_area.forEach((input, idx) => {
@@ -42,6 +58,14 @@ const markInfo = [
 //MarkerInfo의 첫번째 데이터로 기본 지도 인스턴스 생성
 const map = new kakao.maps.Map(mapContainer, { center: markInfo[0].position, level: 3 });
 
+//맵타입 인스턴스 생성후 맵인스턴스에 바인딩
+const mapTypeControl = new kakao.maps.MapTypeControl();
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+//맵줌컨트롤 인스턴스 생성후 맵인스턴스에 바인딩
+const zoomControl = new kakao.maps.ZoomControl();
+map.addControl(zoomControl, kakao.maps.ControlPosition.BOTTOMRIGHT);
+
 markInfo.forEach((info, idx) => {
 	const marker = new kakao.maps.Marker({ position: info.position, image: new kakao.maps.MarkerImage(info.imgSrc, info.imgSize, info.imgPos) });
 	marker.setMap(map);
@@ -50,8 +74,7 @@ markInfo.forEach((info, idx) => {
 		if (info.button.classList.contains('on')) return;
 		for (el of btns) el.classList.remove('on');
 		btns[idx].classList.add('on');
-
-		//window.scrollTo({ top: document.querySelector('#map').offsetTop - 200, behavior: 'smooth' });
+		active_index = idx;
 
 		new Anime(window, {
 			prop: 'scroll',
@@ -63,18 +86,8 @@ markInfo.forEach((info, idx) => {
 	});
 });
 
-//const mapOption = { center: markInfo[0].position, level: 3 }; //지도 생성 옵션
-//const map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-//const markerImage = new kakao.maps.MarkerImage(markInfo[0].imgSrc, markInfo[0].imgSize, markInfo[0].imgPos);
-//const marker = new kakao.maps.Marker({ position: markInfo[0].position, image: markerImage });
-//
-////마커인스턴트의 setMap 함수로 지도 인스턴스 바인딩
-//marker.setMap(map);
-//
-//btnBranch1.addEventListener('click', () => map.panTo(position));
-//btnBranch2.addEventListener('click', () => map.panTo(position2));
-
-//원하는 위치의 위도, 경도 좌표값을 디테일 하게 구하는 법
-//1. 구글맵스에서 원하는 위치값을 찍어서 좌표값 복사
-//2. 카카오맵의 클릭한 위치 마커찍기 샘플예제의 직접해보기 섹션에 해당 위치값을 붙여넣기
-//3. 해당 테스트화면의 정밀하게 원하는 지점을 찍고 해당 코드값을 활용
+//브라우저 리사이즈시 지도 위치 및 마커 가운데 보정
+window.addEventListener('resize', () => {
+	//현재 활성화 되어 있는 순번의 지역위치값으로 맵 인스턴스 가운데 위치보정
+	map.setCenter(markInfo[active_index].position);
+});
