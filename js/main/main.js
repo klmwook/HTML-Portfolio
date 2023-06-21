@@ -1,3 +1,5 @@
+const list = document.querySelector('#scroll_navi');
+const btns = list.querySelectorAll('li');
 const secs = document.querySelectorAll('section');
 const speed = 500;
 const baseline = -window.innerHeight / 2;
@@ -21,8 +23,17 @@ window.onload = function () {
 	document.querySelector('#categories .wrap').classList.add('on');
 };
 
+//모바일 메뉴 버튼 이벤트
 mo_menu.addEventListener('click', () => {
 	alert('모바일 메뉴 버튼 이벤트 ');
+});
+
+window.addEventListener('resize', () => {
+	if (eventBlocker) return;
+	eventBlocker = setTimeout(() => {
+		modifyPos();
+		eventBlocker = null;
+	}, speed);
 });
 
 window.addEventListener('scroll', () => {
@@ -31,10 +42,15 @@ window.addEventListener('scroll', () => {
 	skills_custom_scroll();
 	youtube_custom_scroll();
 
-	// if (eventBlocker) return;
-	// eventBlocker = setTimeout(() => {
-	// 	eventBlocker = null;
-	// }, speed);
+	if (eventBlocker) return;
+	eventBlocker = setTimeout(() => {
+		activation();
+		eventBlocker = null;
+	}, speed);
+});
+
+btns.forEach((btn, idx) => {
+	btn.addEventListener('click', () => enableEvent && moveScroll(idx));
 });
 
 //모바일에서는 fixed를 안할라고 했는데 생각해보니 해야될 듯.
@@ -59,6 +75,38 @@ function _headerFix() {
 	// 	//fix 없애기
 	// 	document.querySelector('header').classList.remove('fix');
 	// }
+}
+
+function activation() {
+	const scroll = window.scrollY;
+
+	if (scroll <= 500) {
+		for (const el of secs) el.classList.remove('on');
+	}
+
+	secs.forEach((_, idx) => {
+		if (scroll >= secs[idx].offsetTop + baseline) {
+			for (const el of btns) el.classList.remove('on');
+			btns[idx].classList.add('on');
+		}
+	});
+}
+
+function moveScroll(idx) {
+	enableEvent = false;
+	new Anime(window, {
+		prop: 'scroll',
+		value: secs[idx].offsetTop,
+		duration: speed,
+		callback: () => (enableEvent = true),
+	});
+}
+
+//브라우저 resize시 맞춰지는 함수
+function modifyPos() {
+	const active = list.querySelector('li.on');
+	const active_index = Array.from(btns).indexOf(active);
+	window.scrollTo({ top: secs[active_index].offsetTop, behavior: 'smooth' });
 }
 
 //카테고리 스크롤 위로 나오는 함수
