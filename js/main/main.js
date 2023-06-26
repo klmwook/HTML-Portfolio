@@ -53,6 +53,25 @@ btns.forEach((btn, idx) => {
 	btn.addEventListener('click', () => enableEvent && moveScroll(idx));
 });
 
+//youtube - prev , next 클릭 이벤트
+document.querySelector('#arrow_prev').addEventListener('click', () => {
+	const Youtube = document.querySelector('#Youtube_List');
+	Youtube.append(Youtube.firstElementChild);
+	document.querySelector('#arrow_prev').classList.add('on');
+	setTimeout(() => {
+		document.querySelector('#arrow_prev').classList.remove('on');
+	}, 500);
+});
+
+document.querySelector('#arrow_next').addEventListener('click', () => {
+	const Youtube = document.querySelector('#Youtube_List');
+	Youtube.prepend(Youtube.lastElementChild);
+	document.querySelector('#arrow_next').classList.add('on');
+	setTimeout(() => {
+		document.querySelector('#arrow_next').classList.remove('on');
+	}, 500);
+});
+
 //모바일에서는 fixed를 안할라고 했는데 생각해보니 해야될 듯.
 function _headerFix() {
 	const scroll = window.scrollY;

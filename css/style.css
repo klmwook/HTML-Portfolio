@@ -1347,7 +1347,131 @@ footer .wrap .SNS .right li .icon_img3:hover {
 #youtube .wrap .swiper_btn_area .next > .arrow {
   transform: scaleX(-1);
 }
+#youtube .wrap .navi {
+  text-align: center;
+}
+#youtube .wrap .navi .prev,
+#youtube .wrap .navi .next {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #bbb;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+#youtube .wrap .navi .prev::before, #youtube .wrap .navi .prev::after,
+#youtube .wrap .navi .next::before,
+#youtube .wrap .navi .next::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+}
+#youtube .wrap .navi .prev::before,
+#youtube .wrap .navi .next::before {
+  transform: rotate(45deg) translateX(0px);
+}
+#youtube .wrap .navi .prev::after,
+#youtube .wrap .navi .next::after {
+  transform: rotate(-45deg) translateX(0px);
+}
+#youtube .wrap .navi .prev span,
+#youtube .wrap .navi .next span {
+  width: 20px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+}
+#youtube .wrap .navi .prev.on,
+#youtube .wrap .navi .next.on {
+  animation: wrap 0.3s 1;
+}
+#youtube .wrap .navi .prev::before, #youtube .wrap .navi .prev::after {
+  left: 15px;
+  transform-origin: left center;
+}
+#youtube .wrap .navi .prev span {
+  left: 15px;
+}
+#youtube .wrap .navi .prev.on span {
+  animation: prevArrow 0.5s 1;
+}
+#youtube .wrap .navi .next::before, #youtube .wrap .navi .next::after {
+  right: 15px;
+  transform-origin: right center;
+}
+#youtube .wrap .navi .next span {
+  right: 15px;
+}
+#youtube .wrap .navi .next.on span {
+  animation: nextArrow 0.5s 1;
+}
 
+@keyframes wrap {
+  0% {
+    transform: scale(1);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  70% {
+    transform: scale(2);
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    border: 1px solid rgb(255, 255, 255);
+  }
+}
+@keyframes prevArrow {
+  0% {
+    left: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+  70% {
+    left: -30px;
+    width: 50px;
+    opacity: 0;
+  }
+  71% {
+    left: 100px;
+    width: 120px;
+    opacity: 0;
+  }
+  100% {
+    left: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+}
+@keyframes nextArrow {
+  0% {
+    right: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+  70% {
+    right: -30px;
+    width: 50px;
+    opacity: 0;
+  }
+  71% {
+    right: 100px;
+    width: 120px;
+    opacity: 0;
+  }
+  100% {
+    right: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 999px) {
   #youtube {
     padding: 40px 60px;
