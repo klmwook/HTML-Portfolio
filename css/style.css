@@ -1759,23 +1759,22 @@ footer .wrap .SNS .right li .icon_img3:hover {
   border-bottom: 1px solid #1e1e2f;
 }
 #Sub_Youtube .wrap .contents ul > li .you_title {
-  width: 30%;
+  width: 25vw;
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
   font-weight: 700;
   font-size: 20px;
-  min-height: 250px;
 }
 #Sub_Youtube .wrap .contents ul > li .you_desc {
-  width: 30%;
+  width: 25vw;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  min-height: 300px;
   font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
 }
 #Sub_Youtube .wrap .contents ul > li .you_desc p {
+  margin-bottom: 20px;
   opacity: 0.7;
 }
 #Sub_Youtube .wrap .contents ul > li .you_desc .channel_info {
@@ -1792,8 +1791,7 @@ footer .wrap .SNS .right li .icon_img3:hover {
   color: orange;
 }
 #Sub_Youtube .wrap .contents ul > li .you_thumb {
-  width: 30%;
-  min-height: 250px;
+  width: 25vw;
   cursor: pointer;
 }
 #Sub_Youtube .wrap .contents ul > li .you_thumb img {
