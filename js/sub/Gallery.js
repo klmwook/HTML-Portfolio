@@ -4,7 +4,8 @@ const input = document.querySelector('.input_Area input');
 const btnSearch = document.querySelector('.input_Area button');
 const btnInterest = document.querySelector('.button_Area .int');
 const btnMine = document.querySelector('.button_Area .my');
-const api_key = '4b95b58f2acca136d03e1c6883048c6c';
+//const api_key = '4b95b58f2acca136d03e1c6883048c6c';
+const api_key = config.flickr_apikey;
 const num = 50;
 const myId = '198489363@N07';
 
